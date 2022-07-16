@@ -22,18 +22,18 @@ if UserInput == "1":
 elif UserInput == "2":
     for key in packagedgoods:
         rounded_packagedgoods = '{:.2f}'.format(round(packagedgoods[key], 2))
-        print(key, rounded_packagedgoods[key])
+        print(key, rounded_packagedgoods)
 elif UserInput == "3":
     for key in cannedgoods:
         rounded_cannedgoods = '{:.2f}'.format(round(cannedgoods[key], 2))
-        print(key, rounded_cannedgoods[key])
+        print(key, rounded_cannedgoods)
 elif UserInput == "4":
     for key in condiments_sauce:
         rounded_condiments_sauce = '{:.2f}'.format(round(condiments_sauce[key], 2))
-        print(key, condiments_sauce[key])
+        print(key, condiments_sauce)
 elif UserInput == "5":
     for key in drink_beverages:
         rounded_drink_beverages = '{:.2f}'.format(round(drink_beverages[key], 2))
-        print(key, rounded_drink_beverages[key])
+        print(key, rounded_drink_beverages)
 else:
     print('Not an Option')
