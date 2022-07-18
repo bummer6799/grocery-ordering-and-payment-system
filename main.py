@@ -1,5 +1,6 @@
 import math
 
+
 dairy = {'Milk': 2.3, 'Butter': 4.5, 'Eggs': 3.4, 'Cheese Slices': 3.15, 'Evaporated Milk Creamer': 1.4, 'Milo': 12.4,
          'Biscuits': 5.3, 'Yogurt': 0.95}
 packagedgoods = {'Bread': 2.7, 'Cereal': 7, 'Crackers': 3.1, 'Chips': 2.6, 'Raisin': 2.1, 'Nuts': 2, 'Green Bean': 1.05,
@@ -11,6 +12,8 @@ condiments_sauce = {'Fine Salt': 0.8, 'Sea Salt Flakes': 1.3, 'Chicken Stock': 3
 drink_beverages = {'Green Tea Canned 330 ML': 15, 'Blackcurrant Ribena 330 ML': 31, '100 Plus 24 Cans': 15,
                    'Orange Cordial 2 Litre': 3.9, 'Mineral Water 24 x 600 ML': 7, 'Pineapple juice': 0.8,
                    'Nescafe Coffee': 9.9, 'Coke 24 Cans': 12.4}
+
+all = [dairy, packagedgoods, cannedgoods, condiments_sauce, drink_beverages]
 
 print("1 - Dairy \n2 - Packaged Goods \n3 - Canned Goods \n4 - Condiments/Sauces \n5 - Drink & Beverages")
 UserInput = input("Enter Category: ")
@@ -34,7 +37,7 @@ elif UserInput == "3":
 elif UserInput == "4":
     for key in condiments_sauce:
         rounded_condiments_sauce = '{:.2f}'.format(round(condiments_sauce[key], 2))
-        print(key, " ", "$",condiments_sauce, sep = '')
+        print(key, " ", "$",rounded_condiments_sauce, sep = '')
         print('--------------------')
 elif UserInput == "5":
     for key in drink_beverages:
@@ -43,4 +46,23 @@ elif UserInput == "5":
         print('--------------------')
 else:
     print('Not an Option')
+    quit()
 
+while True:
+    print("If you want to end, type 'End'")
+    cart = input("Enter your choice:")
+    if cart == "End":
+        break
+    if cart in dairy:
+        quantity = input("Enter Quantity: ")
+        if input != int:
+            print("Please enter a number!")
+        print("Added Dairy product!")
+    elif cart in packagedgoods:
+        print("Added Packaged Goods product!")
+    elif cart in cannedgoods:
+        print("Added Canned Goods product!")
+    elif cart in condiments_sauce:
+        print("Added Condiments Sauce product!")
+    elif cart in drink_beverages:
+        print("Added Condiments Saucce product!")
