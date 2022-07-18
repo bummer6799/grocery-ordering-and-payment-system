@@ -49,20 +49,28 @@ else:
     quit()
 
 while True:
-    print("If you want to end, type 'End'")
-    cart = input("Enter your choice:")
-    if cart == "End":
+    print("--------------------")
+    print("Check out and pay - End \nCheck your cart - Cart")
+    print("--------------------")
+    input1 = input("Enter your choice:")
+    cart = ['--------------------\n Start \n--------------------']
+    if input1 == "End":
         print("Ended.")
-    if cart in dairy:
+    elif input1 == "Cart":
+        for items in cart:
+            print(items)
+    elif input1 in dairy:
         quantity = input("Enter Quantity: ")
-        if input != int:
-            print("Please enter a number!")
+        # if input != int:
+        #     print("Please enter a number!")
         print("Added Dairy product!")
-    elif cart in packagedgoods:
+    elif input1 in packagedgoods:
         print("Added Packaged Goods product!")
-    elif cart in cannedgoods:
+    elif input1 in cannedgoods:
         print("Added Canned Goods product!")
-    elif cart in condiments_sauce:
+    elif input1 in condiments_sauce:
         print("Added Condiments Sauce product!")
-    elif cart in drink_beverages:
-        print("Added Condiments Saucce product!")
+    elif input1 in drink_beverages:
+        print("Added Drink & Beverages product!")
+
+        cart.insert(-1,input1)
