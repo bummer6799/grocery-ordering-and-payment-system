@@ -52,7 +52,7 @@ while True:
     print("If you want to end, type 'End'")
     cart = input("Enter your choice:")
     if cart == "End":
-        break
+        print("Ended.")
     if cart in dairy:
         quantity = input("Enter Quantity: ")
         if input != int:
