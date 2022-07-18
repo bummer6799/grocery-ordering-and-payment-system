@@ -14,26 +14,33 @@ drink_beverages = {'Green Tea Canned 330 ML': 15, 'Blackcurrant Ribena 330 ML': 
 
 print("1 - Dairy \n2 - Packaged Goods \n3 - Canned Goods \n4 - Condiments/Sauces \n5 - Drink & Beverages")
 UserInput = input("Enter Category: ")
+print('--------------------')
 
 if UserInput == "1":
     for key in dairy:
         rounded_dairy = '{:.2f}'.format(round(dairy[key], 2))
-        print(key, rounded_dairy)
+        print(key, " ", "$", rounded_dairy, sep = '')
+        print('--------------------')
 elif UserInput == "2":
     for key in packagedgoods:
         rounded_packagedgoods = '{:.2f}'.format(round(packagedgoods[key], 2))
-        print(key, rounded_packagedgoods)
+        print(key, " ", "$",rounded_packagedgoods, sep = '')
+        print('--------------------')
 elif UserInput == "3":
     for key in cannedgoods:
         rounded_cannedgoods = '{:.2f}'.format(round(cannedgoods[key], 2))
-        print(key, rounded_cannedgoods)
+        print(key, " ", "$",rounded_cannedgoods, sep = '')
+        print('--------------------')
 elif UserInput == "4":
     for key in condiments_sauce:
         rounded_condiments_sauce = '{:.2f}'.format(round(condiments_sauce[key], 2))
-        print(key, condiments_sauce)
+        print(key, " ", "$",condiments_sauce, sep = '')
+        print('--------------------')
 elif UserInput == "5":
     for key in drink_beverages:
         rounded_drink_beverages = '{:.2f}'.format(round(drink_beverages[key], 2))
-        print(key, rounded_drink_beverages)
+        print(key, " ", "$",rounded_drink_beverages, sep = '')
+        print('--------------------')
 else:
     print('Not an Option')
+
