@@ -1,6 +1,5 @@
 import math
 
-
 dairy = {'Milk': 2.3, 'Butter': 4.5, 'Eggs': 3.4, 'Cheese Slices': 3.15, 'Evaporated Milk Creamer': 1.4, 'Milo': 12.4,
          'Biscuits': 5.3, 'Yogurt': 0.95}
 packagedgoods = {'Bread': 2.7, 'Cereal': 7, 'Crackers': 3.1, 'Chips': 2.6, 'Raisin': 2.1, 'Nuts': 2, 'Green Bean': 1.05,
@@ -15,6 +14,8 @@ drink_beverages = {'Green Tea Canned 330 ML': 15, 'Blackcurrant Ribena 330 ML': 
 
 all = [dairy, packagedgoods, cannedgoods, condiments_sauce, drink_beverages]
 
+cart = ['--------------------\n Start \n--------------------']
+
 print("1 - Dairy \n2 - Packaged Goods \n3 - Canned Goods \n4 - Condiments/Sauces \n5 - Drink & Beverages")
 UserInput = input("Enter Category: ")
 print('--------------------')
@@ -22,27 +23,27 @@ print('--------------------')
 if UserInput == "1":
     for key in dairy:
         rounded_dairy = '{:.2f}'.format(round(dairy[key], 2))
-        print(key, " ", "$", rounded_dairy, sep = '')
+        print(key, " ", "$", rounded_dairy, sep='')
         print('--------------------')
 elif UserInput == "2":
     for key in packagedgoods:
         rounded_packagedgoods = '{:.2f}'.format(round(packagedgoods[key], 2))
-        print(key, " ", "$",rounded_packagedgoods, sep = '')
+        print(key, " ", "$", rounded_packagedgoods, sep='')
         print('--------------------')
 elif UserInput == "3":
     for key in cannedgoods:
         rounded_cannedgoods = '{:.2f}'.format(round(cannedgoods[key], 2))
-        print(key, " ", "$",rounded_cannedgoods, sep = '')
+        print(key, " ", "$", rounded_cannedgoods, sep='')
         print('--------------------')
 elif UserInput == "4":
     for key in condiments_sauce:
         rounded_condiments_sauce = '{:.2f}'.format(round(condiments_sauce[key], 2))
-        print(key, " ", "$",rounded_condiments_sauce, sep = '')
+        print(key, " ", "$", rounded_condiments_sauce, sep='')
         print('--------------------')
 elif UserInput == "5":
     for key in drink_beverages:
         rounded_drink_beverages = '{:.2f}'.format(round(drink_beverages[key], 2))
-        print(key, " ", "$",rounded_drink_beverages, sep = '')
+        print(key, " ", "$", rounded_drink_beverages, sep='')
         print('--------------------')
 else:
     print('Not an Option')
@@ -52,28 +53,26 @@ while True:
     print("--------------------")
     print("Check out and pay - End \nCheck your cart - Cart")
     print("--------------------")
-    input1 = input("Enter your choice: ")
-    cart = ['--------------------\n Start \n--------------------']
+    input1 = input("Enter your choice:")
+    # cart = ['--------------------\n Start \n--------------------']
+
     if input1 == "End":
         print("Ended.")
+        quit()
     elif input1 == "Cart":
         for items in cart:
             print(items)
     elif input1 in dairy:
-        #quantity = input("Enter Quantity: ")
+        # quantity = input("Enter Quantity: ")
         # if input != int:
         #     print("Please enter a number!")
         print("Added Dairy product!")
-        cart.append(input1)
     elif input1 in packagedgoods:
         print("Added Packaged Goods product!")
-        cart.append(input1)
     elif input1 in cannedgoods:
         print("Added Canned Goods product!")
-        cart.append(input1)
     elif input1 in condiments_sauce:
         print("Added Condiments Sauce product!")
-        cart.append(input1)
     elif input1 in drink_beverages:
-        print("Added Drink & Beverages product!")
         cart.append(input1)
+        print("Added Drink & Beverages product!")
