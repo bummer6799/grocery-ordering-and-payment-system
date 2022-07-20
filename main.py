@@ -52,7 +52,7 @@ while True:
     print("--------------------")
     print("Check out and pay - End \nCheck your cart - Cart")
     print("--------------------")
-    input1 = input("Enter your choice:")
+    input1 = input("Enter your choice: ")
     cart = ['--------------------\n Start \n--------------------']
     if input1 == "End":
         print("Ended.")
@@ -60,17 +60,20 @@ while True:
         for items in cart:
             print(items)
     elif input1 in dairy:
-        quantity = input("Enter Quantity: ")
+        #quantity = input("Enter Quantity: ")
         # if input != int:
         #     print("Please enter a number!")
         print("Added Dairy product!")
+        cart.append(input1)
     elif input1 in packagedgoods:
         print("Added Packaged Goods product!")
+        cart.append(input1)
     elif input1 in cannedgoods:
         print("Added Canned Goods product!")
+        cart.append(input1)
     elif input1 in condiments_sauce:
         print("Added Condiments Sauce product!")
+        cart.append(input1)
     elif input1 in drink_beverages:
         print("Added Drink & Beverages product!")
-
-        cart.insert(-1,input1)
+        cart.append(input1)
