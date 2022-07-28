@@ -66,6 +66,7 @@ while True:
         print('--------------------\n Start \n--------------------')
         for items in cart:
             print(items, cart[items])
+
         print('--------------------')
     elif input1 == "Category":
         print("1 - Dairy \n2 - Packaged Goods \n3 - Canned Goods \n4 - Condiments/Sauces \n5 - Drink & Beverages")
@@ -106,7 +107,7 @@ while True:
         except:
             print("Enter a number!")
             continue
-        cart[input1] = (input2)
+        cart[input1] = input2
         print("Added Dairy product!")
     elif input1 in packagedgoods:
         cart.append(input1)
