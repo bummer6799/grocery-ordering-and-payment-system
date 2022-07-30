@@ -90,8 +90,8 @@ def quantity(a):
     totalTemp = a[str(input1)] * input2
     if input1 in a:
         total[input1] = totalTemp
-     else:
-    print("[Error 002]")
+    else:
+        print("[Error 002]")
 
 while True:
     #print("--------------------")
