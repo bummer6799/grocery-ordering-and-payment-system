@@ -1,4 +1,3 @@
-import math
 import time
 
 dairy = {'Milk': 2.3, 'Butter': 4.5, 'Eggs': 3.4, 'Cheese Slices': 3.15, 'Evaporated Milk Creamer': 1.4, 'Milo': 12.4,
